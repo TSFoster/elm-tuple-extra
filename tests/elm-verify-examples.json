@@ -1,4 +1,4 @@
 {
   "root": "../src",
-  "tests": ["Tuple.Extra", "./README.md"]
+  "tests": ["Tuple2", "Tuple3", "./README.md"]
 }

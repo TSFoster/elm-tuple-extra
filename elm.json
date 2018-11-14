@@ -3,9 +3,10 @@
     "name": "TSFoster/elm-tuple-extra",
     "summary": "Convenience functions for working with tuples",
     "license": "BSD-3-Clause",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "exposed-modules": [
-        "Tuple.Extra"
+        "Tuple2",
+        "Tuple3"
     ],
     "elm-version": "0.19.0 <= v < 0.20.0",
     "dependencies": {
