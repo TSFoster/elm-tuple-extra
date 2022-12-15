@@ -7,10 +7,11 @@ Convenience functions for working with tuples.
 * `pairTo`, `double` and `swap` for creating and arranging tuples
 * `uncurry` and `apply` for using functions with values in a tuple
 * `maybeMapFirst` and `maybeMapSecond` for lifting a `Maybe` out of a tuple
+* `mapBothSame` for convenience to apply a function to a same-typed tuple
 
 ## `Tuple3`
 
-* Copies and extensions of all `Tuple` functions to work with 3-tuples (`first`, `second`, `third`, `mapFirst`, `mapSecond`, `mapThird`, `mapAllThree`)
+* Copies and extensions of all `Tuple` functions to work with 3-tuples (`first`, `second`, `third`, `mapFirst`, `mapSecond`, `mapThird`, `mapAllThree`, `mapAllThreeSame`)
 * Functions for creating 3-tuples (`join`, `joinTo`, `triple`, `splitFirst`, `splitSecond`)
 * Functions for rearranging values in 3-tuples (`reverse`, `rotateLeft`, `rotateRight`, `swapFirst`, `swapLast`)
 * `uncurry` and `apply` for using functions with values in a 3-tuple
