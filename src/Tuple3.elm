@@ -108,6 +108,17 @@ mapThird fn ( a, b, c ) =
     ( a, b, fn c )
 
 
+{-| Transform all values in a 3-Tuple. 
+
+    mapAll (List.repeat 2) ( "stressed", 16, 1 ) --> ( ["stressed", "stressed"], [16, 16], [1, 1])
+    
+    mapAll String.fromInt ( 10 16 1 ) -> ( "10", "16", "1" )
+-}
+mapAll : (a -> a2) -> ( a, a, a ) -> ( a2, a2, a2)
+mapAll fn ( a, b, c ) =
+    ( fn a, fn b, fn c)
+
+
 {-| Create a 3-tuple with three values.
 
     join 1 2 3 --> ( 1, 2, 3 )
