@@ -86,8 +86,8 @@ apply ( fn, a ) =
 Convenience function to help with repetitive usage in Tuple.mapBoth()
 
     ("1", "1000")
-        |> mapToBothSame String.toInt
-    --> (1, 1000)
+        |> mapBothSame (\s -> s ++ "0")
+    --> ("10", "1000)
 
 -}
 mapBothSame : (a -> a2) -> ( a, a ) -> ( a2, a2 )
