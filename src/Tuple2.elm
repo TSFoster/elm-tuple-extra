@@ -2,6 +2,7 @@ module Tuple2 exposing
     ( pairTo, double
     , swap
     , uncurry, apply
+    , mapBothSame
     , maybeMapFirst, maybeMapSecond
     )
 
@@ -80,6 +81,18 @@ apply (String.toLower, "HELLO") --> "hello"
 apply : ( a -> b, a ) -> b
 apply ( fn, a ) =
     fn a
+
+{-| Apply a function to both elements of a 2-tuple where both entries are the same type.
+Convenience function to help with repetitive usage in Tuple.mapBoth()
+
+    ("1", "1000")
+        |> mapToBothSame String.toInt
+    --> (1, 1000)
+
+-}
+mapBothSame : (a -> a2) -> ( a, a ) -> ( a2, a2 )
+mapBothSame fn ( a, b ) =
+    (fn a, fn b)
 
 
 {-| Apply a function that produces a `Maybe` to the first value in a 2-tuple. If
